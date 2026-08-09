@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Setup — Cover Screen Trackpad</title>
+<meta name="description" content="How to set up Cover Screen Trackpad, including Shizuku. One-time, about five minutes.">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 108 108'><rect width='108' height='108' fill='%230D1117'/><path d='M32,30 H76 A8,8 0 0 1 84,38 V70 A8,8 0 0 1 76,78 H32 A8,8 0 0 1 24,70 V38 A8,8 0 0 1 32,30 Z' fill='none' stroke='%236E7885' stroke-width='4.5'/><path d='M73,58 L54,50' fill='none' stroke='%233DDCFF' stroke-width='7' stroke-linecap='round'/><path d='M29,34 L29,55 L35.3,50.1 L38.8,58.5 L42.3,57.1 L38.8,48.7 L46.5,48.7 Z' fill='%23fff' stroke='%230D1117' stroke-width='2.2'/></svg>">
+</head>
+<body>
+<div class="wrap narrow">
+
+  <h1>Setting it up</h1>
+  <p class="updated">About five minutes, once. Nothing here needs a computer.</p>
+
+  <div class="note lede">
+    <p>
+      Most of this is installing <strong>Shizuku</strong>. It is the only awkward
+      part, it is a one-time job, and the reason it is needed is explained below —
+      it is not busywork.
+    </p>
+  </div>
+
+  <h2>Why Shizuku is required</h2>
+  <p>
+    While a foldable is open, Android switches the cover screen off completely and
+    hides it from every app. No permission, setting or Good Lock module changes
+    that.
+  </p>
+  <p>
+    There is a way through: your phone already has a mode that powers both panels
+    at once — it is what the camera's dual preview uses. Cover Screen Trackpad
+    asks the system to switch into it, and asking requires a privilege ordinary
+    apps do not have. <a href="https://shizuku.rikka.app/">Shizuku</a> is a free,
+    open-source app that grants exactly that privilege, and nothing else.
+  </p>
+  <p>
+    Shizuku is widely used and does not need root. It is a separate app with its
+    own developer and its own privacy policy.
+  </p>
+
+  <h2>Steps</h2>
+  <ol class="steps">
+    <li>
+      <strong>Install Shizuku</strong> from
+      <a href="https://shizuku.rikka.app/">shizuku.rikka.app</a>.
+      <p>
+        Use the project's own site rather than the Play Store. Play reports Shizuku
+        as incompatible on many phones where it works perfectly well — that is a
+        restriction on the listing, not on your device.
+      </p>
+    </li>
+    <li>
+      <strong>Turn on Wireless debugging.</strong>
+      <p>
+        Settings → Developer options → Wireless debugging. If Developer options is
+        not there, go to Settings → About phone → Software information and tap
+        <em>Build number</em> seven times.
+      </p>
+    </li>
+    <li>
+      <strong>Start Shizuku</strong> using its wireless-debugging pairing flow.
+      Shizuku walks you through it.
+      <p>
+        In Shizuku's settings, turn on <strong>Start on boot</strong>. Without it,
+        Shizuku stops when you restart the phone and the trackpad will not work
+        until you start it again — this is the single most common cause of "it
+        worked yesterday".
+      </p>
+    </li>
+    <li>
+      <strong>Install Cover Screen Trackpad</strong> and open it.
+    </li>
+    <li>
+      <strong>Tap the buttons at the top of the app.</strong> It shows only the
+      ones that are actually missing:
+      <ul>
+        <li><strong>Grant overlay permission</strong> — lets the pointer be drawn over other apps.</li>
+        <li><strong>Enable accessibility service</strong> — how the pointer moves and clicks.</li>
+        <li><strong>Allow Shizuku</strong> — a one-time dialog; tap Allow.</li>
+      </ul>
+    </li>
+    <li>
+      <strong>Open the phone fully and launch the app.</strong> The cover screen
+      turns black — that is the trackpad — and the pointer appears in the middle of
+      the main display.
+    </li>
+  </ol>
+
+  <h2>If something is not working</h2>
+
+  <details>
+    <summary>It worked yesterday, and today nothing happens</summary>
+    <p>
+      Shizuku almost certainly stopped when the phone restarted. Open Shizuku and
+      start it, then turn on <strong>Start on boot</strong> in its settings so it
+      does not happen again. Cover Screen Trackpad's main screen detects this and
+      shows a button that takes you straight there.
+    </p>
+  </details>
+
+  <details>
+    <summary>I launched the app but there is no pointer</summary>
+    <p>
+      Check the status line at the top of the app — it says what is missing. The
+      usual causes are that the phone is not fully open, or that Shizuku is not
+      running.
+    </p>
+    <p>
+      The pointer is also hidden on purpose while the settings screen is full
+      screen: your finger is placing the active zone rather than driving the
+      pointer. Leave the settings screen and it comes back. If you want to change
+      settings and use the trackpad at the same time, put the app in split screen
+      or a pop-up window.
+    </p>
+  </details>
+
+  <details>
+    <summary>The pointer moves but taps do nothing</summary>
+    <p>
+      If you ever installed an earlier build of this app under a different name,
+      two copies of its accessibility service may be running and competing.
+      Uninstall the old one — anything called <em>FlexPad</em> — and restart the
+      phone.
+    </p>
+  </details>
+
+  <details>
+    <summary>The phone is showing both screens and will not stop</summary>
+    <p>
+      Rare, and it means a session ended without cleaning up. Open and close the
+      phone once with Cover Screen Trackpad running, and it resets itself.
+    </p>
+  </details>
+
+  <details>
+    <summary>Does this drain the battery?</summary>
+    <p>
+      Barely. The cover screen is pure black and the panel is OLED, so almost no
+      pixels are lit — measured on a Flip 6, a running session costs about
+      <strong>4 mA</strong> more than having the main screen on, which is inside
+      the noise of ordinary use.
+    </p>
+    <p>
+      If you want to be thorough, the idle fade-out setting ends a session
+      automatically when you stop using it, and pointer memory brings the pointer
+      back where you left it.
+    </p>
+  </details>
+
+  <footer>
+    <p><a href="index.html">← Cover Screen Trackpad</a> &nbsp;·&nbsp; <a href="privacy.html">Privacy policy</a></p>
+  </footer>
+
+</div>
+</body>
+</html>

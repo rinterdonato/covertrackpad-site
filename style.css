@@ -1,0 +1,154 @@
+/*
+  Shared styling for covertrackpad.com.
+
+  Colours come from ../brand-kit.md and are not invented here. The accent SWAPS
+  by theme rather than being one colour dimmed: #3DDCFF is the app's own cyan and
+  is bright enough to carry dark text on a dark page, but it cannot carry white
+  text at all (1.63:1), so light mode uses the deepened teal instead. That is the
+  one rule in the brand kit that must not be broken.
+*/
+
+:root {
+  --cyan: #3DDCFF;
+  --cyan-hover: #17B6D6;
+  --teal: #0E6E7E;
+  --teal-hover: #08525E;
+  --coral: #FF6F5E;
+
+  --surface: #FFFFFF;
+  --raised: #F4F6F8;
+  --ink: #171A1E;
+  --muted: #5A626B;
+  --line: #E2E6EA;
+  --accent: var(--teal);
+  --accent-hover: var(--teal-hover);
+  --on-accent: #FFFFFF;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --surface: #0D1117;
+    --raised: #14181E;
+    --ink: #E6EAF0;
+    --muted: #99A2AD;
+    --line: #232932;
+    --accent: var(--cyan);
+    --accent-hover: var(--cyan-hover);
+    --on-accent: #08131A;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--surface);
+  color: var(--ink);
+  font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap { max-width: 720px; margin: 0 auto; padding: 0 24px; }
+.wrap.narrow { max-width: 680px; padding-top: 56px; padding-bottom: 72px; }
+
+a { color: var(--accent); }
+
+/* ---- header ---- */
+
+header { padding: 72px 0 48px; text-align: center; }
+.icon { width: 88px; height: 88px; border-radius: 20px; display: block; margin: 0 auto 24px; }
+h1 { font-size: clamp(30px, 6vw, 42px); line-height: 1.15; margin: 0 0 12px; letter-spacing: -0.02em; }
+.tagline { color: var(--muted); font-size: 15px; font-style: italic; margin: 0 0 28px; }
+.lede { font-size: clamp(18px, 2.6vw, 21px); margin: 0 auto; max-width: 34em; }
+.updated { color: var(--muted); font-size: 14px; margin: 0 0 32px; }
+
+/* ---- buttons ---- */
+
+.cta { margin: 36px 0 0; }
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: var(--on-accent);
+  padding: 13px 26px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.btn:hover { background: var(--accent-hover); }
+/* Light mode darkens the teal, so the label has to go white to stay legible. */
+@media (prefers-color-scheme: light) { .btn:hover { color: #FFFFFF; } }
+.cta small { display: block; color: var(--muted); font-size: 14px; margin-top: 12px; }
+
+/* ---- sections ---- */
+
+section { padding: 40px 0; border-top: 1px solid var(--line); }
+h2 { font-size: 22px; margin: 0 0 18px; letter-spacing: -0.01em; }
+h3 { font-size: 16px; margin: 26px 0 6px; }
+p { margin: 0 0 16px; }
+ul { margin: 0 0 16px; padding-left: 22px; }
+li { margin-bottom: 8px; }
+
+.steps { counter-reset: step; list-style: none; padding: 0; }
+.steps li { counter-increment: step; position: relative; padding-left: 44px; margin-bottom: 22px; }
+.steps li::before {
+  content: counter(step);
+  position: absolute; left: 0; top: 1px;
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--accent); color: var(--on-accent);
+  display: grid; place-items: center;
+  font-size: 14px; font-weight: 700;
+}
+
+/* ---- cards ---- */
+
+.tiers { display: grid; gap: 16px; grid-template-columns: 1fr; }
+@media (min-width: 620px) { .tiers { grid-template-columns: 1fr 1fr; } }
+.tier { background: var(--raised); border: 1px solid var(--line); border-radius: 12px; padding: 20px; }
+.tier h3 {
+  margin-top: 0; font-size: 15px; text-transform: uppercase;
+  letter-spacing: 0.06em; color: var(--muted);
+}
+.tier ul { margin-bottom: 0; }
+
+.note {
+  background: var(--raised);
+  border-left: 3px solid var(--accent);
+  padding: 14px 18px;
+  border-radius: 0 8px 8px 0;
+  margin: 0 0 16px;
+}
+.note :last-child { margin-bottom: 0; }
+.note.lede { font-size: 18px; padding: 16px 20px; margin-bottom: 24px; }
+
+/* ---- FAQ ---- */
+
+details {
+  border-bottom: 1px solid var(--line);
+  padding: 14px 0;
+}
+details summary {
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+details summary::-webkit-details-marker { display: none; }
+details summary::after { content: "+"; color: var(--muted); font-weight: 400; }
+details[open] summary::after { content: "\2013"; }
+details > *:not(summary) { margin-top: 12px; }
+details p:last-child { margin-bottom: 0; }
+
+/* ---- misc ---- */
+
+code { background: var(--raised); padding: 2px 6px; border-radius: 5px; font-size: 0.9em; }
+
+footer {
+  padding: 40px 0 64px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 14px;
+}
+footer a { color: var(--muted); }
+.fineprint { font-size: 13px; }
