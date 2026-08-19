@@ -32,21 +32,23 @@
     </p>
 
     <!--
-      A real capture of the inner display, with the see-through overlay on. That
-      overlay is why one recording can show both halves at once: the pale
-      rectangle is the cover screen drawn through the phone, and the cyan dots
-      are the fingers actually touching it. Two simultaneous screen recordings
-      are impossible on this hardware — the device allows one encoder session —
-      so a side-by-side would have had to be two takes pretending to be
-      simultaneous, with the finger going one way and the pointer another.
+      The demo clip was pulled 2026-08-18 to be re-shot. When it returns:
+      record a real capture of the INNER display with the see-through overlay
+      on, which is what lets one recording show both halves at once — the pale
+      rectangle is the cover screen drawn through the phone, the cyan dots are
+      the fingers actually touching it. Do not attempt a side-by-side: two
+      simultaneous screen recordings are impossible on this hardware (one
+      encoder session), so it would be two takes pretending to be simultaneous,
+      with the finger going one way and the pointer another.
+
+      The re-shoot should show covertrackpad.com itself on the phone — the site
+      is near-black in dark mode, which is the only background the pale panel
+      outline and cyan dots read against. It also needs captions and a text
+      description of what it shows, neither of which the old clip had.
+
+      Markup removed rather than commented out so the browser cannot fetch a
+      missing file; demo.mp4 and demo-poster.jpg stay in the repo.
     -->
-    <video class="demo" src="demo.mp4" poster="demo-poster.jpg"
-           autoplay muted loop playsinline
-           aria-label="A pointer moving on the main display, driven by a finger on the cover screen"></video>
-    <p class="demo-caption">
-      The pale outline is the cover screen, seen through the phone.
-      The cyan dots are fingers on the back.
-    </p>
 
     <div class="cta">
       <a class="btn" href="#requirements">Will it work on my phone?</a>
@@ -96,9 +98,10 @@
       </p>
     </div>
     <p>
-      Not every foldable exposes that mode. Non-Samsung foldables are untested, and some
-      models may not work at all — which is why the app tells you what is missing rather
-      than failing silently.
+      That mode is a Samsung addition rather than part of standard Android, so
+      <strong>non-Samsung foldables cannot run Cover Screen Trackpad at all</strong>. That
+      is a hardware limit and not something a future update can fix. If you try it on a
+      phone without the mode, the app says so plainly rather than failing silently.
     </p>
   </section>
 
@@ -171,11 +174,17 @@
     <details>
       <summary>Does it work on a Pixel Fold, or a Motorola Razr?</summary>
       <p>
-        Untested, and honestly uncertain. Everything rests on the phone exposing a
-        mode that powers both screens at once. Samsung foldables do; whether other
-        makers do is an open question we have not been able to answer without the
-        hardware. If you have one and are willing to try, get in touch — the app
-        tells you plainly when the mode is missing rather than failing silently.
+        No, and we would rather say so than sell you something that cannot work.
+        Everything rests on the phone exposing a mode that powers both screens at
+        once. We bought a Razr+ and measured it: no such mode exists on it. The
+        underlying reason generalises — standard Android only describes which
+        <em>single</em> display is currently primary, and running both at once is a
+        Samsung extension on top of that. So Pixel Fold and every other non-Samsung
+        foldable are almost certainly in the same position.
+      </p>
+      <p>
+        This is hardware, not effort, and no future version will change it. If a
+        non-Samsung foldable ever ships that mode we would be glad to hear about it.
       </p>
     </details>
 
