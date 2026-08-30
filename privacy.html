@@ -12,22 +12,23 @@
 <div class="wrap">
 
   <h1>Privacy policy</h1>
-  <p class="updated">Cover Screen Trackpad, by June8LLC. Last updated 19 August 2026.</p>
+  <p class="updated">Cover Screen Trackpad, by June8LLC. Last updated 30 August 2026.</p>
 
   <p class="note lede">
-    <strong>Cover Screen Trackpad collects no data whatsoever.</strong> It has no analytics,
+    <strong>Cover Screen Trackpad collects nothing about you.</strong> It has no analytics,
     no accounts and no advertising. We run no server, so there is nowhere for your data to
-    go and nothing of yours for us to hold.
+    go — and the app never sends anything anywhere on its own.
   </p>
 
   <h2>What we collect</h2>
   <p>
-    Nothing. The app does not gather, store, transmit or sell any personal or device
-    information, and none of its own code contacts the network.
+    Nothing. There is no analytics of any kind, nothing is sold or handed on to anyone,
+    and none of the app&rsquo;s own code contacts the network. It has no ability to send
+    anything anywhere unless you deliberately do it yourself.
   </p>
   <p>
-    Two honest qualifications, because &ldquo;no internet at all&rdquo; would not be quite
-    true of the app you install:
+    Three honest qualifications, because a flat &ldquo;nothing, ever&rdquo; would not be
+    quite true of the app you install:
   </p>
   <ul>
     <li>
@@ -43,6 +44,18 @@
       backup of your phone and come back if you reinstall or move to a new device. That
       backup belongs to you and lives in your Google account; we have no access to it. You
       can switch it off in Android&rsquo;s backup settings.
+    </li>
+    <li>
+      <strong>If you send a problem report, you send it yourself.</strong> The app has a
+      button that opens <em>your</em> email app with a description of your phone and your
+      settings already written out — Android version, phone model, cover screen size,
+      which permissions are granted, and what the app did in the last few minutes. Nothing
+      is sent until you read it and press send, and you can delete any line first. The app
+      has no way to send it on its own, and no server to send it to.
+      <br><br>
+      Your cover screen message and the position of your pointer are deliberately left
+      out, because they are yours and neither helps us fix anything. If you do send a
+      report, we hold the email you sent, and nothing else.
     </li>
   </ul>
 
@@ -67,13 +80,15 @@
       using, so it stays visible as you move between apps.
     </li>
     <li>
-      <strong>Notifications.</strong> Shows the running-session notice, which is also how
-      you stop a session.
+      <strong>Notifications.</strong> Shows the running-session notice, providing an easy
+      way to stop the app.
     </li>
     <li>
       <strong>Shizuku.</strong> Used to ask Android to power both screens at once, and to
-      send a camera key if you assign the camera-shutter gesture. Shizuku is a separate
-      app with its own privacy policy.
+      send a camera key if you assign the camera shutter to the three-finger tap. (That
+      gesture is not offered on the Flip 3 or Flip 4, whose cover screens can only feel two
+      fingers at a time, so on those phones no camera key is ever sent.) Shizuku is a
+      separate app with its own privacy policy.
     </li>
   </ul>
   <p>
@@ -86,9 +101,27 @@
   <p>
     Accessibility access is powerful, and you are right to be careful about which apps you
     grant it to. Cover Screen Trackpad needs it for one reason: injecting pointer movement
-    and clicks is only possible through that API. It reads window state solely to tell
-    whether a keyboard is on screen, so that edge-click scrolling can be suppressed while
-    you type. It does not log, store or transmit anything it sees.
+    and clicks is only possible through that API.
+  </p>
+  <p>
+    It uses that access to notice two things about your screen, and nothing else:
+  </p>
+  <ul>
+    <li>
+      <strong>Whether a keyboard is up</strong>, so that edge-click scrolling switches off
+      while you type and does not fight the keys along the bottom of the screen.
+    </li>
+    <li>
+      <strong>That something on screen changed</strong> — not what changed. Android will
+      quietly take the cover screen back when apps come and go, which would end your
+      session mid-use, so the app treats any such change as a cue to check it still has
+      the cover screen and take it back if not. Only the fact that something happened is
+      used; nothing about what.
+    </li>
+  </ul>
+  <p>
+    It does not read the text on your screen, and it does not log, store or transmit
+    anything it sees.
   </p>
 
   <h2>Purchases</h2>
