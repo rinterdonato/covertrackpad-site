@@ -52,7 +52,7 @@
 
     <div class="cta">
       <a class="btn" href="#requirements">Will it work on my phone?</a>
-      <small>Coming to Google Play. Works on Galaxy Z Flip and Z Fold.
+      <small>In testing now, coming to Google Play. Works on Galaxy Z Flip and Z Fold.
         <a href="setup.html">Setup takes about five minutes.</a></small>
     </div>
   </header>
@@ -73,9 +73,9 @@
   <section>
     <h2>How it works</h2>
     <ol class="steps">
-      <li><strong>Open the phone and launch the app.</strong> The cover screen goes black — that's the trackpad surface.</li>
+      <li><strong>Open the phone and launch the app.</strong> The cover screen becomes active — that's the trackpad surface.</li>
       <li><strong>Use any app you like.</strong> The session keeps running while you browse, read or type.</li>
-      <li><strong>Drive from the back.</strong> Slide to move, tap to click, hold to drag. Two fingers scroll and pinch.</li>
+      <li><strong>Drive from the back.</strong> Slide to move, tap to click, hold to drag. With PRO, two fingers scroll and pinch.</li>
       <li><strong>Fold it, or turn the screen off.</strong> The session ends and your phone folds exactly as normal.</li>
     </ol>
   </section>
@@ -159,21 +159,37 @@
       <p>
         Moving a pointer and clicking on your behalf is only possible through that
         API — it is the same route any mouse-emulation tool takes. It is a powerful
-        permission and you are right to be careful with it. This app reads window
-        state for exactly one purpose: noticing when a keyboard is open, so
-        edge-click scrolling can be suppressed while you type. Nothing it sees is
-        logged, stored or sent anywhere; it holds no internet permission at all.
+        permission and you are right to be careful with it.
+      </p>
+      <p>
+        It notices two things about your screen, and nothing else. <strong>Whether a
+        keyboard is up</strong>, so edge-click scrolling switches off while you type.
+        And <strong>that something changed</strong> — not what changed: Android quietly
+        takes the cover screen back when apps come and go, which would end your session
+        mid-use, so any change is a cue to check and take it back if needed.
+      </p>
+      <p>
+        It does not read the text on your screen, and nothing it sees is logged, stored
+        or sent anywhere. The app does list the internet permission, which arrives with
+        Google's billing library and is used only to ask Google Play whether you have
+        bought PRO.
       </p>
     </details>
 
     <details>
       <summary>Will it drain my battery?</summary>
       <p>
-        Barely. The trackpad surface is pure black and the cover panel is OLED, so
-        almost nothing is lit. Measured on a Flip 6, a running session costs about
-        <strong>4 mA</strong> more than simply having the main screen on — below
-        the noise floor of ordinary use. There is also an idle fade-out that ends
-        a session when you stop touching it.
+        Barely. Cover screens are OLED, where a black pixel is simply switched off,
+        and a trackpad session lights very little of one: a few words, and a trail
+        that follows your finger while you are actually using it. The cost sits
+        inside the ordinary noise of a day's use. A larger cover screen has more
+        panel to light, so a Fold costs a little more than a Flip.
+      </p>
+      <p>
+        <strong>PRO switches the words and the animation off</strong>, which leaves the
+        panel black — quieter to be seen using, as well as very slightly cheaper to
+        light. There is also an idle fade-out that ends a session when you stop
+        touching it.
       </p>
     </details>
 
@@ -215,9 +231,11 @@
   <section>
     <h2>Privacy</h2>
     <p>
-      Cover Screen Trackpad <strong>collects nothing</strong>. No analytics, no accounts,
-      no network requests, nothing leaves your phone. It has no server to send anything to.
-      Full details in the <a href="privacy.html">privacy policy</a>.
+      Cover Screen Trackpad <strong>collects nothing about you</strong>. No analytics, no
+      accounts, and <strong>no server of ours to send anything to</strong>. The app never
+      sends anything anywhere on its own — the only two exceptions are Google Play being
+      asked whether you have bought PRO, and a problem report that you read and send
+      yourself. Both are spelled out in the <a href="privacy.html">privacy policy</a>.
     </p>
   </section>
 
