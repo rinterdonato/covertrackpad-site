@@ -50,9 +50,36 @@
       missing file; demo.mp4 and demo-poster.jpg stay in the repo.
     -->
 
+    <!--
+      DO NOT DEPLOY THIS BEFORE THE PRODUCTION LISTING RESOLVES.
+
+      Measured 2026-09-02, signed out: the store URL did not render a listing at
+      all. It redirected and answered "We're sorry, the requested URL was not
+      found on this server." Shipping the badge before production is live hands
+      every visitor a 404 on the one link that matters.
+
+      APPROVAL IS NOT THE SAME AS LIVE. After Google approves, the rollout still
+      has to propagate. Open the URL below in a PRIVATE WINDOW and confirm a real
+      listing renders to a signed-out visitor. That, not the approval email, is
+      the go signal.
+
+      The badge is Google's artwork: do not recolour, redraw, crop or restyle it,
+      and leave clear space around it of at least a quarter of its height.
+      play-badge.png is the official asset kept locally rather than hotlinked, so
+      the page does not depend on Google's CDN staying put.
+
+      The badge comes FIRST and the compatibility question second, which is a
+      reversal. Until now the page had to ask before it could offer; someone who
+      already owns a Flip should not have to answer a question to reach an
+      install button.
+    -->
     <div class="cta">
+      <a class="badge"
+         href="https://play.google.com/store/apps/details?id=com.june8llc.covertrackpad">
+        <img src="play-badge.png" alt="Get it on Google Play" height="60">
+      </a>
       <a class="btn" href="#requirements">Will it work on my phone?</a>
-      <small>In testing now, coming to Google Play. Works on Galaxy Z Flip and Z Fold.
+      <small>Works on Galaxy Z Flip and Z Fold.
         <a href="setup.html">Setup takes about five minutes.</a></small>
     </div>
   </header>

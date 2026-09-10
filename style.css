@@ -102,6 +102,16 @@ h1 { font-size: clamp(30px, 6vw, 42px); line-height: 1.15; margin: 0 0 12px; let
 @media (prefers-color-scheme: light) { .btn:hover { color: #FFFFFF; } }
 .cta small { display: block; color: var(--muted); font-size: 14px; margin-top: 12px; }
 
+/*
+  The Play badge. Google's artwork, so this rule may set POSITION and SPACING
+  and nothing else — no filters, no border-radius, no background, no recolour,
+  and never a height under 40px. The clear space below is the quarter-of-height
+  minimum the brand guidelines ask for, which is why the margin is 15px against
+  a 60px badge rather than a rounder number.
+*/
+.badge { display: block; margin: 0 0 15px; }
+.badge img { display: block; height: 60px; width: auto; }
+
 /* ---- sections ---- */
 
 section { padding: 40px 0; border-top: 1px solid var(--line); }
