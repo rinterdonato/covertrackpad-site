@@ -24,7 +24,12 @@
     <p>
       After that, most of this is installing <strong>Shizuku</strong>. It is the only
       awkward part, it is a one-time job, and the reason it is needed is explained
-      below — it is not busywork.
+      below &mdash; it is not busywork.
+    </p>
+    <p>
+      <strong>On a newer Samsung, turn off Auto Blocker first.</strong> It is on by
+      default and it quietly blocks the rest of this page, which looks like
+      something being broken rather than a setting being in the way.
     </p>
   </div>
 
@@ -48,6 +53,31 @@
 
   <h2>Steps</h2>
   <ol class="steps">
+    <!--
+      AUTO BLOCKER GOES FIRST, and it is here because it was measured rather than
+      guessed: 2026-09-10, a Flip 7 refused USB debugging outright until Auto
+      Blocker was turned off. Samsung ships it ON by default on newer One UI, so a
+      buyer meets it BEFORE Shizuku, before developer options, before anything on
+      this page - and the symptom is a refusal with no useful message, which reads
+      as "this app does not work" rather than "a setting is in the way".
+    -->
+    <li>
+      <strong>Turn off Auto Blocker</strong> &mdash; Settings &rarr; Security and
+      privacy &rarr; Auto Blocker, and switch it off.
+      <p>
+        <strong>Samsung turns this on by default on newer phones, and it blocks
+        the next step before you get to it.</strong> Auto Blocker stops apps
+        installing from anywhere except the Play Store and blocks USB connections,
+        which is exactly what the rest of this guide needs. It does not announce
+        itself: the install simply refuses, or the connection never happens, and
+        it looks like something is broken.
+      </p>
+      <p>
+        You can turn it back on when you are done. It is a Samsung security
+        feature, not a Cover Screen Trackpad one, and leaving it off is a choice
+        about your phone rather than something this app requires.
+      </p>
+    </li>
     <li>
       <strong>Install Shizuku</strong> &mdash; take the APK from
       <a href="https://github.com/RikkaApps/Shizuku/releases">its GitHub releases page</a>.
