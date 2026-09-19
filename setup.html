@@ -108,18 +108,18 @@
       <strong>Start Shizuku</strong> using its wireless-debugging pairing flow.
       Shizuku walks you through it.
       <p>
-        <strong>Shizuku stops when you restart the phone</strong>, and the trackpad
-        will not work until you start it again the same way. This is the single
-        most common cause of "it worked yesterday". It takes about twenty seconds
-        once you have done it once.
+        <strong>After a restart, Shizuku usually starts itself</strong> &mdash; recent
+        versions start automatically, without root, when the phone is on the Wi-Fi
+        network you paired it on. Measured on a Galaxy Z Flip 7, 19 September 2026:
+        three minutes after a reboot, Shizuku was running and the trackpad worked
+        with nothing opened by hand.
       </p>
       <p>
-        Shizuku's <strong>Start on boot</strong> setting does not help here: it is
-        labelled <em>(root)</em> and, as it says, it only applies to rooted phones.
-        Recent versions of Shizuku mention starting automatically without root when
-        the phone is on a trusted Wi-Fi network &mdash; if you find that setting, it
-        is worth trying, but do not count on it.
-      </p>
+        <strong>If the trackpad does not work after a restart</strong>, open Shizuku
+        and start it again the same way. The most likely reason is that the phone is
+        on a different Wi-Fi network from the one you paired on. Shizuku's
+        <strong>Start on boot</strong> setting does not help here: it is labelled
+        <em>(root)</em> and only applies to rooted phones.
     </li>
     <!--
       THIS STEP USED TO TELL A READER TO INSTALL SOMETHING AND NOT SAY FROM
@@ -158,11 +158,12 @@
   <details>
     <summary>It worked yesterday, and today nothing happens</summary>
     <p>
-      Shizuku almost certainly stopped when the phone restarted &mdash; it does not
-      start itself on an unrooted phone. Open Shizuku and start it again through
-      the same wireless-debugging flow you used during setup. Cover Screen
-      Trackpad's main screen detects this and shows a button that takes you
-      straight there.
+      Shizuku has probably not started. It starts itself after a reboot only when the
+      phone is on the Wi-Fi network you paired it on, so a different network &mdash; or
+      Wi-Fi being off &mdash; means starting it by hand. Open Shizuku and start it again
+      through the same wireless-debugging flow you used during setup. Cover Screen
+      Trackpad's main screen detects this and shows a button that takes you straight
+      there.
     </p>
   </details>
 
