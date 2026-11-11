@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Setup — Cover Screen Trackpad</title>
-<meta name="description" content="How to set up Cover Screen Trackpad, including Shizuku. One-time, about five minutes.">
+<meta name="description" content="How to set up Cover Screen Trackpad: one switch, about a minute.">
 <link rel="stylesheet" href="style.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 108 108'><rect width='108' height='108' fill='%230D1117'/><path d='M32,30 H76 A8,8 0 0 1 84,38 V70 A8,8 0 0 1 76,78 H32 A8,8 0 0 1 24,70 V38 A8,8 0 0 1 32,30 Z' fill='none' stroke='%236E7885' stroke-width='4.5'/><path d='M73,58 L54,50' fill='none' stroke='%233DDCFF' stroke-width='7' stroke-linecap='round'/><path d='M29,34 L29,55 L35.3,50.1 L38.8,58.5 L42.3,57.1 L38.8,48.7 L46.5,48.7 Z' fill='%23fff' stroke='%230D1117' stroke-width='2.2'/></svg>">
 </head>
@@ -12,182 +12,83 @@
 <div class="wrap narrow">
 
   <h1>Setting it up</h1>
-  <p class="updated">About five minutes, once. Nothing here needs a computer.</p>
+  <p class="updated">About a minute, once. Nothing to install but the app.</p>
 
   <div class="note lede">
     <p>
       <strong>First, check if your phone qualifies:</strong> a Samsung Galaxy Z Flip or
       Z Fold running <strong>Android 15 (One UI 7) or newer</strong>. The trackpad
-      needs a Samsung-only mode that powers both screens at once, and older versions
-      either lack it or drop it every time you switch apps.
-    </p>
-    <p>
-      After that, most of this is installing <strong>Shizuku</strong>. It is the only
-      awkward part, it is a one-time job, and the reason it is needed is explained
-      below &mdash; it is not busywork.
-    </p>
-    <p>
-      <strong>On a newer Samsung, turn off Auto Blocker first.</strong> It is on by
-      default and it quietly blocks the rest of this page, which looks like
-      something being broken rather than a setting being in the way.
+      needs the phone to offer its outer screen to apps while it is open.
+      Pixel 9 Pro Fold and newer have the same mode and ran in our lab tests; Play
+      support for them is coming with the next update.
     </p>
   </div>
 
-  <h2>Why Shizuku is required</h2>
-  <p>
-    While a foldable is open, Android switches the cover screen off completely and
-    hides it from every app. No permission, setting or Good Lock module changes
-    that.
-  </p>
-  <p>
-    There is a way through: your phone already has a mode that powers both panels
-    at once — it is what the camera's dual preview uses. Cover Screen Trackpad
-    asks the system to switch into it, and asking requires a privilege ordinary
-    apps do not have. <a href="https://shizuku.rikka.app/">Shizuku</a> is a free,
-    open-source app that grants exactly that privilege, and nothing else.
-  </p>
-  <p>
-    Shizuku is widely used and does not need root. It is a separate app with its
-    own developer and its own privacy policy.
-  </p>
-
-  <p class="note">
-    <strong>Prefer to watch?</strong>
-    <a href="https://youtu.be/wd2AmA5TXk8" rel="noopener">The setup video</a>
-    walks through every step below on a real phone, in about six and a half minutes.
-  </p>
-
   <h2>Steps</h2>
   <ol class="steps">
-    <!--
-      AUTO BLOCKER GOES FIRST, and it is here because it was measured rather than
-      guessed: 2026-09-10, a Flip 7 refused USB debugging outright until Auto
-      Blocker was turned off. Samsung ships it ON by default on newer One UI, so a
-      buyer meets it BEFORE Shizuku, before developer options, before anything on
-      this page - and the symptom is a refusal with no useful message, which reads
-      as "this app does not work" rather than "a setting is in the way".
-    -->
     <li>
-      <strong>Turn off Auto Blocker</strong> &mdash; Settings &rarr; Security and
-      privacy &rarr; Auto Blocker, and switch it off.
-      <p>
-        <strong>Samsung turns this on by default on newer phones, and it blocks
-        the next step before you get to it.</strong> Auto Blocker stops apps
-        installing from anywhere except the Play Store and blocks USB connections,
-        which is exactly what the rest of this guide needs. It does not announce
-        itself: the install simply refuses, or the connection never happens, and
-        it looks like something is broken.
-      </p>
-      <p>
-        You can turn it back on when you are done. It is a Samsung security
-        feature, not a Cover Screen Trackpad one, and leaving it off is a choice
-        about your phone rather than something this app requires.
-      </p>
-    </li>
-    <li>
-      <strong>Install Shizuku</strong> &mdash; take the APK from
-      <a href="https://github.com/RikkaApps/Shizuku/releases">its GitHub releases page</a>.
-      <p>
-        <strong>Not from the Play Store, and not from the download page's first link.</strong>
-        Play reports Shizuku as incompatible on many phones where it works perfectly well,
-        and Shizuku's own site lists Play at the top of its download page, so it is easy to
-        end up back there. The GitHub link above is the direct APK, which is the route that
-        works. Shizuku is free and open source; <a href="https://shizuku.rikka.app/">its
-        site</a> is worth a read if you want to know what it does.
-      </p>
-    </li>
-    <li>
-      <strong>Turn on Wireless debugging.</strong>
-      <p>
-        Settings → Developer options → Wireless debugging. If Developer options is
-        not there, go to Settings → About phone → Software information and tap
-        <em>Build number</em> seven times.
-      </p>
-    </li>
-    <li>
-      <strong>Start Shizuku</strong> using its wireless-debugging pairing flow.
-      Shizuku walks you through it.
-      <p>
-        <strong>After a restart, Shizuku usually starts itself</strong> &mdash; recent
-        versions start automatically, without root, when the phone is on the Wi-Fi
-        network you paired it on. Measured on a Galaxy Z Flip 7, 19 September 2026:
-        three minutes after a reboot, Shizuku was running and the trackpad worked
-        with nothing opened by hand.
-      </p>
-      <p>
-        <strong>If the trackpad does not work after a restart</strong>, open Shizuku
-        and start it again the same way. The most likely reason is that the phone is
-        on a different Wi-Fi network from the one you paired on. Shizuku's
-        <strong>Start on boot</strong> setting does not help here: it is labelled
-        <em>(root)</em> and only applies to rooted phones.
-    </li>
-    <!--
-      THIS STEP USED TO TELL A READER TO INSTALL SOMETHING AND NOT SAY FROM
-      WHERE, which is worse than the front page's "coming soon" was: this page is
-      instructions, and a step someone cannot follow stops the whole sequence.
-
-      Same rule as the badge on index.html: DO NOT DEPLOY BEFORE THE STORE URL
-      RESOLVES to a signed-out visitor. A dead link inside a numbered setup list
-      is the worst place on the site for one.
-    -->
-    <li>
-      <strong>Install Cover Screen Trackpad</strong> from Google Play, then open
-      it.
+      <strong>Install Cover Screen Trackpad</strong> from Google Play, then open it.
       <p>
         <a href="https://play.google.com/store/apps/details?id=com.june8llc.covertrackpad">Cover
         Screen Trackpad on Google Play</a>
       </p>
     </li>
     <li>
-      <strong>Tap the buttons at the top of the app.</strong> It shows only the
-      ones that are actually missing:
-      <ul>
-        <li><strong>Grant overlay permission</strong> — lets the pointer be drawn over other apps.</li>
-        <li><strong>Enable accessibility service</strong> — how the pointer moves and clicks.</li>
-        <li><strong>Allow Shizuku</strong> — a one-time dialog; tap Allow.</li>
-      </ul>
+      <strong>Turn on its accessibility service.</strong> Tap the button at the top of
+      the app, choose <em>Installed apps &rarr; Cover Trackpad</em>, switch it on and
+      tap <em>Allow</em>. This is how the pointer moves and clicks.
     </li>
     <li>
-      <strong>Open the phone fully and launch the app.</strong> The cover screen
-      becomes active and the pointer appears on the main display.
+      <strong>Open the phone fully and tap <em>Start trackpad</em>.</strong> The cover
+      screen becomes the trackpad, the pointer appears on the main screen, and a small
+      floating button shows while it is on. Go to any app.
     </li>
   </ol>
+  <p>
+    Next time, just launch the app. Close the phone, turn the screen off, tap the
+    floating button or choose <em>Turn off</em> in the menu to stop it.
+  </p>
+  <p>
+    <strong>Coming from an earlier version?</strong> Versions before 1.1 needed a
+    companion app called Shizuku. Version 1.1 does not use it, and there is nothing
+    to set up in developer options. If you installed Shizuku only for Cover Screen
+    Trackpad, you can remove it.
+  </p>
 
   <h2>If something is not working</h2>
-
-  <details>
-    <summary>It worked yesterday, and today nothing happens</summary>
-    <p>
-      Shizuku has probably not started. It starts itself after a reboot only when the
-      phone is on the Wi-Fi network you paired it on, so a different network &mdash; or
-      Wi-Fi being off &mdash; means starting it by hand. Open Shizuku and start it again
-      through the same wireless-debugging flow you used during setup. Cover Screen
-      Trackpad's main screen detects this and shows a button that takes you straight
-      there.
-    </p>
-  </details>
 
   <details>
     <summary>I launched the app but there is no pointer</summary>
     <p>
       Check the status line at the top of the app — it says what is missing. The
-      usual causes are that the phone is not fully open, or that Shizuku is not
-      running.
-    </p>
-    <p>
-      The pointer is also hidden on purpose while the settings screen is full
-      screen: your finger is placing the active zone rather than driving the
-      pointer. Leave the settings screen and it comes back. If you want to change
-      settings and use the trackpad at the same time, put the app in split screen
-      or a pop-up window.
+      usual cause is that the phone is not fully open.
     </p>
   </details>
 
   <details>
-    <summary>The phone is showing both screens and will not stop</summary>
+    <summary>&ldquo;This phone does not offer its outer screen to apps&rdquo;</summary>
     <p>
-      Rare, and it means the trackpad turned off without cleaning up. Open and close the
-      phone once with Cover Screen Trackpad running, and it resets itself.
+      The phone's software does not allow it, and Cover Screen Trackpad cannot work on
+      it. Please send a problem report from the app, so we know.
+    </p>
+  </details>
+
+  <details>
+    <summary>Finger trails on the cover screen, but no pointer on the main screen</summary>
+    <p>
+      Android has hidden the pointer. The app notices and fixes this by itself within a
+      couple of seconds. If the pointer still does not appear, turn the trackpad off and
+      launch it again. If that does not help either, go to
+      <em>Settings &rarr; Accessibility &rarr; Installed apps &rarr; Cover Trackpad</em>,
+      switch it off and on again, then launch Cover Screen Trackpad.
+    </p>
+  </details>
+
+  <details>
+    <summary>The pointer will not click a permission pop-up</summary>
+    <p>
+      Android blocks that on purpose, so no app can tap <em>Allow</em> for you. Use the
+      screen directly for those, then carry on.
     </p>
   </details>
 
@@ -213,7 +114,7 @@
   </details>
 
   <footer>
-    <p><a href="index.html">← Cover Screen Trackpad</a> &nbsp;·&nbsp; <a href="privacy.html">Privacy policy</a></p>
+    <p><a href="index.html">← Cover Screen Trackpad</a> &nbsp;·&nbsp; <a href="help.html">Help</a> &nbsp;·&nbsp; <a href="privacy.html">Privacy policy</a></p>
   </footer>
 
 </div>

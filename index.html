@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cover Screen Trackpad — turn a foldable's cover screen into a trackpad</title>
-<meta name="description" content="Use the cover screen of a Samsung foldable as a rear trackpad while the phone is open. Your finger on the back drives a pointer on the front.">
+<meta name="description" content="Use the cover screen of a Galaxy Z Flip or Z Fold as a rear trackpad while the phone is open. Your finger on the back drives a pointer on the front. Setup is one switch: no Shizuku, no PC, no root.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 108 108'><rect width='108' height='108' fill='%230D1117'/><path d='M32,30 H76 A8,8 0 0 1 84,38 V70 A8,8 0 0 1 76,78 H32 A8,8 0 0 1 24,70 V38 A8,8 0 0 1 32,30 Z' fill='none' stroke='%236E7885' stroke-width='4.5'/><path d='M73,58 L54,50' fill='none' stroke='%233DDCFF' stroke-width='7' stroke-linecap='round'/><path d='M29,34 L29,55 L35.3,50.1 L38.8,58.5 L42.3,57.1 L38.8,48.7 L46.5,48.7 Z' fill='%23fff' stroke='%230D1117' stroke-width='2.2'/></svg>">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -31,59 +31,20 @@
       a pointer moves on the front, tap to click.
     </p>
 
-    <!--
-      RESTORED 2026-09-20 with the re-shot demo. It meets the conditions the old
-      note set: burned captions, a text description below, and covertrackpad.com
-      on the phone in shot.
-
-      IT DEVIATES ON ONE POINT, deliberately. The old note asked for a screen
-      capture with the see-through overlay, so one recording could show both
-      halves. This is a camera shot of the phone instead, with the hand on the
-      back and the front display both genuinely in frame - which does the same
-      job without asking the viewer to interpret an overlay. The overlay version
-      is still the better way to prove the MAPPING; this is the better way to
-      prove a human is doing it.
-
-      Silent, muted, looping: it plays in a feed and on a listing where nobody
-      has sound on. Full 53s version with narration is the linked Short.
-    -->
     <p>
       <video src="demo.mp4" poster="demo-poster.jpg" autoplay muted loop playsinline
-             preload="metadata" width="720" height="1280"
-             style="max-width:270px;width:100%;height:auto;border-radius:12px;display:block;margin:1.5rem auto">
+             preload="metadata" width="1280" height="790"
+             style="max-width:100%;width:100%;height:auto;border-radius:12px;display:block;margin:1.5rem auto">
       </video>
     </p>
     <p style="text-align:center">
       <small>
-        A finger slides on the back of a Galaxy Z Flip; the pointer moves on the
-        screen facing you and taps a link. No sound.
-        <a href="https://www.youtube.com/shorts/7q7ZxhUSA1Y" rel="noopener">Watch the full 50 seconds</a>.
+        Both screens of a Galaxy Z Fold 8 side by side, recorded in a device lab:
+        a touch on the cover screen (right) moves the pointer on the main screen
+        (left), and two circles drawn on the cover open the menu. No sound.
       </small>
     </p>
 
-    <!--
-      DO NOT DEPLOY THIS BEFORE THE PRODUCTION LISTING RESOLVES.
-
-      Measured 2026-09-02, signed out: the store URL did not render a listing at
-      all. It redirected and answered "We're sorry, the requested URL was not
-      found on this server." Shipping the badge before production is live hands
-      every visitor a 404 on the one link that matters.
-
-      APPROVAL IS NOT THE SAME AS LIVE. After Google approves, the rollout still
-      has to propagate. Open the URL below in a PRIVATE WINDOW and confirm a real
-      listing renders to a signed-out visitor. That, not the approval email, is
-      the go signal.
-
-      The badge is Google's artwork: do not recolour, redraw, crop or restyle it,
-      and leave clear space around it of at least a quarter of its height.
-      play-badge.png is the official asset kept locally rather than hotlinked, so
-      the page does not depend on Google's CDN staying put.
-
-      The badge comes FIRST and the compatibility question second, which is a
-      reversal. Until now the page had to ask before it could offer; someone who
-      already owns a Flip should not have to answer a question to reach an
-      install button.
-    -->
     <div class="cta">
       <a class="badge"
          href="https://play.google.com/store/apps/details?id=com.june8llc.covertrackpad">
@@ -91,7 +52,7 @@
       </a>
       <a class="btn" href="#requirements">Will it work on my phone?</a>
       <small>Works on Galaxy Z Flip and Z Fold.
-        <a href="setup.html">Setup takes about five minutes.</a></small>
+        <a href="setup.html">Setup is one switch.</a></small>
     </div>
   </header>
 
@@ -112,6 +73,11 @@
       no dragging, no second hand, nothing held down. If swiping is painful or unreliable
       for you, that is the difference between reading a long page and giving up on it.
     </p>
+    <p>
+      That makes it a reading aid as much as a pointer: hold the phone in one hand, move
+      the pointer and edge-click your way down a long article, and nothing ever covers
+      the text you are reading.
+    </p>
   </section>
 
   <section>
@@ -119,59 +85,34 @@
     <ol class="steps">
       <li><strong>Open the phone and launch the app.</strong> The cover screen becomes active — that's the trackpad surface.</li>
       <li><strong>Use any app you like.</strong> The trackpad stays on while you browse, read or type.</li>
-      <li><strong>Drive from the back.</strong> Slide to move, tap to click, hold to drag. With PRO, two fingers scroll and pinch.</li>
+      <li><strong>Drive from the back.</strong> Slide to move, tap to click, hold to drag. Draw two circles for a menu with Back, Home and Recents. With PRO, two fingers scroll and pinch.</li>
       <li><strong>Close the phone, or turn the screen off.</strong> The trackpad turns off, and folding behaves exactly as it normally does.</li>
     </ol>
-  </section>
-
-  <section id="video">
-    <h2>Watch the full setup</h2>
-    <p>
-      Every step on a real phone, start to finish &mdash; Auto Blocker, Shizuku,
-      the pairing code, the permissions, and the pointer working at the end.
-      About six and a half minutes.
-    </p>
-    <p>
-      <a href="https://youtu.be/wd2AmA5TXk8" rel="noopener">
-        <img src="setup-video.jpg" alt="Set up the Cover Screen Trackpad &mdash; a finger on the back of a Galaxy Z Flip, with the cover screen lit" style="max-width:100%;height:auto;border-radius:10px">
-      </a>
-    </p>
-    <p><small>Opens on YouTube. Nothing on this page loads from YouTube until you click it.</small></p>
   </section>
 
   <section id="requirements">
     <h2>Requirements</h2>
     <ul>
       <li>A <strong>Samsung Galaxy Z Flip or Z Fold</strong>, running <strong>Android 15
-        (One UI 7) or newer</strong>. Those are one requirement rather than two: the
-        dual-screen mode this depends on arrives with One UI, and One UI is Samsung's own
-        software — so <strong>a foldable without it cannot run Cover Screen Trackpad</strong>,
-        and no update of ours can add it. Earlier versions either lack the mode entirely or
-        give it up every time you switch apps, which leaves the cover screen flickering
-        rather than working. Verified by hand on Flip 3, Flip 5, Flip 6, Fold 3 and Fold 7
-        — and note the Flip 3 is a 2021 phone, so what matters is the software version, not
-        how new the handset is.</li>
-      <li><strong><a href="https://shizuku.rikka.app/">Shizuku</a></strong>, a free companion app. This is the only hard dependency.</li>
+        (One UI 7) or newer</strong>. The trackpad uses Android's own way of showing a page
+        on the outer screen while the phone is open, so what matters is the software
+        version, not how new the handset is.</li>
+      <li><strong>Tested by hand</strong> on the Galaxy Z Flip 7, the Z Fold 7, and a 2021
+        Z Fold 3 updated to One UI 7. <strong>Also ran in a device lab</strong>, with
+        scripted touches rather than a hand, on the Galaxy Z Fold 8, Z Flip 8 and Z TriFold.</li>
+      <li><strong>Google Pixel:</strong> the Pixel 9 Pro Fold and newer have the same mode
+        and ran in our lab tests. Play support for them is coming with the next update.</li>
+      <li><strong>Nothing else to install.</strong> Setup is one switch: Android's
+        accessibility permission for the app.</li>
     </ul>
-    <div class="note">
-      <p style="margin:0">
-        <strong>Why Shizuku?</strong> While a foldable is open, Android switches the cover
-        screen off completely and hides it from every app. Shizuku lets Cover Screen Trackpad
-        ask the system to power both panels — the same mode the camera's dual preview uses.
-        There is no way around it, and no other app can grant it. Setting it up takes a few
-        minutes, once. It is also what lets the app check: once Shizuku is running, it looks
-        for the mode and says plainly if your phone does not have it, rather than failing
-        silently.
-      </p>
-    </div>
   </section>
 
   <section>
     <h2>Free and PRO</h2>
     <p>
       <strong>The free version is a real trackpad, not a demo.</strong> Pointer, tap, drag,
-      long-press and edge-click scrolling do not expire and never will. PRO is
-      <strong>$14.99 once</strong> &#8212; no ads, no subscription, no accounts, and yours for good.
+      long-press, edge-click scrolling and the basic menu do not expire and never will. PRO is
+      <strong>$4.99 once</strong> &#8212; no ads, no subscription, no accounts, and yours for good.
     </p>
     <p>
       <strong>Every PRO feature is unlocked for your first seven days</strong>, so you can
@@ -186,31 +127,22 @@
           <li>Pointer, tap, drag and long-press</li>
           <li>Pointer size and speed</li>
           <li>Edge-click scrolling</li>
-          <li>Idle fade-out and silent start</li>
+          <li>The menu: Back, Home, Recents, app drawer, settings, turn off</li>
+          <li>Idle fade-out</li>
+          <li>A small floating button while the trackpad is on</li>
           <li>A message on the cover screen</li>
         </ul>
       </div>
       <div class="tier">
-        <!--
-          $14.99, AND DO NOT PUT $9.99 BACK UNTIL A DEVICE SHOWS IT.
-
-          A $9.99 / 90-day launch offer EXISTS and is Active in Play Console, and
-          the shipped app cannot see it: measured 2026-09-10 on a clean Flip 7,
-          signed into an account that had never bought, the button reads
-          "UNLOCK PRO - $14.99". PremiumManager reads the deprecated
-          oneTimePurchaseOfferDetails and launches billing with no offer token, so
-          the discount is invisible to every published client.
-
-          This page said "$9.99 until 9 December" for about an hour. That was a
-          price Google was not charging. The number here must match what a real
-          device shows, and nothing else.
-        -->
-        <h3>PRO &#8212; $14.99 once</h3>
+        <h3>PRO &#8212; $4.99 once</h3>
         <ul>
           <li>Two-finger scroll, pinch zoom and rotate</li>
+          <li>The full menu (split screen, notifications, flashlight and more), and choosing what it shows</li>
+          <li>The scratch gesture, and choosing what each gesture does</li>
+          <li>No floating button</li>
           <li>Active zone, so gripping fingers don't move the pointer</li>
-          <li>See-through view of the panel behind</li>
           <li>Quick Settings tile and pointer styles</li>
+          <li>Launching the app as an on/off switch</li>
           <li>Your own words on the cover screen, or none at all</li>
         </ul>
       </div>
@@ -221,14 +153,12 @@
     <h2>Questions</h2>
 
     <details>
-      <summary>Do I really have to install Shizuku?</summary>
+      <summary>Do I need to install anything else?</summary>
       <p>
-        Yes, and there is no way around it. While a foldable is open, Android
-        switches the cover screen off and hides it from every app — no permission
-        or setting changes that. Shizuku lets the app ask the system to power both
-        panels, which is the mode the camera's dual preview already uses. It is
-        free, open-source, does not need root, and it is a one-time setup. The
-        <a href="setup.html">setup guide</a> walks through it.
+        No. Earlier versions needed a companion app called Shizuku to wake the cover
+        screen; this one asks Android directly, so setup is a single switch: the
+        accessibility permission. If you installed Shizuku for an earlier version,
+        Cover Screen Trackpad no longer uses it and you can remove it.
       </p>
     </details>
 
@@ -240,11 +170,12 @@
         permission and you are right to be careful with it.
       </p>
       <p>
-        It notices two things about your screen, and nothing else. <strong>Whether a
-        keyboard is up</strong>, so edge-click scrolling switches off while you type.
-        And <strong>that something changed</strong> — not what changed: Android quietly
-        takes the cover screen back when apps come and go, which would switch the
-        trackpad off mid-use, so any change is a cue to check and take it back if needed.
+        It looks only at which windows are open, never at what is in them.
+        <strong>Whether a keyboard is up</strong>, so edge-click scrolling switches off
+        while you type. <strong>Whether an app or split screen is in front</strong>, so
+        the menu offers the right choices. And <strong>that something changed</strong>,
+        so the floating button can step out of the way and the app can check it still
+        has the cover screen.
       </p>
       <p>
         It does not read the text on your screen, and nothing it sees is logged, stored
@@ -275,21 +206,17 @@
     <details>
       <summary>Does it work on a Pixel Fold, or a Motorola Razr?</summary>
       <p>
-        No, and we would rather say so than sell you something that cannot work.
-        Everything rests on the phone exposing a mode that powers both screens at
-        once. We bought a Razr+ and measured it: no such mode exists on it. The
-        underlying reason generalises — standard Android only describes which
-        <em>single</em> display is currently primary, and running both at once is a
-        Samsung extension on top of that. So Pixel Fold and every other non-Samsung
-        foldable are almost certainly in the same position.
+        <strong>Pixel: soon.</strong> Everything rests on the phone offering its outer
+        screen to apps while it is open. The Pixel 9 Pro Fold and newer do, and Cover
+        Screen Trackpad ran on them in our lab tests. Play support for them is coming with
+        the next update; until then Google Play will not offer the app on a Pixel. The
+        original 2023 Pixel Fold has not been tried.
       </p>
       <p>
-        This is not a matter of effort on our part: the mode belongs to the phone's
-        own software, so no version of this app can add it. It is worth being precise
-        about which part is fixed, though — it is <em>not</em> about the age of the
-        hardware. A 2021 Galaxy Z Flip 3 gained the mode through a One UI update and
-        runs this app perfectly. If a non-Samsung foldable ever ships the mode we would
-        be glad to hear about it.
+        <strong>Motorola Razr: no.</strong> We bought a Razr+ and measured it: it has no
+        mode that runs both screens at once, so the app cannot work on it, and no version
+        of ours can add that. Other makers' foldables are unknown to us; if you have one,
+        a problem report from the app tells us what it offers.
       </p>
     </details>
 
@@ -297,7 +224,7 @@
       <summary>Does folding still work normally?</summary>
       <p>
         Yes. The trackpad turns off when you close the phone, when the screen turns
-        off, when you tap Stop on the notification, or when you swipe the app away
+        off, when you tap the floating button, or when you choose Turn off in the menu
         — and once it is off, your phone folds exactly as it always did.
       </p>
     </details>
@@ -306,9 +233,9 @@
       <summary>Can I try PRO before paying?</summary>
       <p>
         Yes &#8212; every PRO feature is on for your first seven days: two-finger scroll,
-        pinch and rotate, the active zone, the see-through view, the Quick Settings tile
-        and pointer styles. The week begins the first time the trackpad actually comes up
-        on the cover screen rather than at install, so a slow setup costs you none of it.
+        pinch and rotate, the full menu and gestures, the active zone, no floating button,
+        the Quick Settings tile and pointer styles. The week begins the first time the trackpad actually comes up
+        on the cover screen rather than at install.
       </p>
       <p>
         Afterwards the trackpad carries on working &#8212; the PRO features switch off and
@@ -340,17 +267,19 @@
 
   <footer>
     <p>
-      Cover Screen Trackpad is made by June8LLC.<br>
+      Cover Screen Trackpad is made by June8 LLC.<br>
       Questions or bug reports: <a href="mailto:support@covertrackpad.com">support@covertrackpad.com</a>
     </p>
     <p>
       <a href="setup.html">Setup guide</a> &nbsp;·&nbsp;
+      <a href="help.html">Help</a> &nbsp;·&nbsp;
       <a href="privacy.html">Privacy policy</a> &nbsp;·&nbsp;
-      <a href="https://june8llc.com">June8LLC</a>
+      <a href="https://june8llc.com">June8 LLC</a>
     </p>
     <p class="fineprint">
-      Galaxy and Samsung are trademarks of Samsung Electronics. This app is not affiliated
-      with or endorsed by Samsung.
+      Galaxy and Samsung are trademarks of Samsung Electronics; Google and Pixel are
+      trademarks of Google LLC. This app is not affiliated with or endorsed by Samsung
+      or Google.
     </p>
   </footer>
 </div>

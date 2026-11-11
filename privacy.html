@@ -12,7 +12,7 @@
 <div class="wrap">
 
   <h1>Privacy policy</h1>
-  <p class="updated">Cover Screen Trackpad, by June8LLC. Last updated 30 August 2026.</p>
+  <p class="updated">Cover Screen Trackpad, by June8 LLC. Last updated 11 November 2026.</p>
 
   <p class="note lede">
     <strong>Cover Screen Trackpad collects nothing about you.</strong> It has no analytics,
@@ -49,7 +49,10 @@
       <strong>If you send a problem report, you send it yourself.</strong> The app has a
       button that opens <em>your</em> email app with a description of your phone and your
       settings already written out — Android version, phone model, cover screen size,
-      which permissions are granted, and what the app did in the last few minutes. Nothing
+      which permissions are granted, and a short record of what the app did recently
+      (sessions starting and ending, mode switches, and a one-line note if the app
+      crashed). That record is kept only on your phone, in storage Android does not back
+      up, so it survives a restart and is there if you need to report a problem. Nothing
       is sent until you read it and press send, and you can delete any line first. The app
       has no way to send it on its own, and no server to send it to.
       <br><br>
@@ -71,30 +74,22 @@
   <ul>
     <li>
       <strong>Accessibility Service.</strong> This is how the app draws the pointer and
-      performs taps, drags and scrolls on your behalf — the same mechanism a mouse would
-      use. It is <em>not</em> used to read screen content for any other purpose, and nothing
-      it observes leaves the device.
+      performs taps, drags, scrolls and the menu's Back, Home and Recents on your behalf
+      — the same mechanism a mouse would use. It is <em>not</em> used to read screen
+      content, and nothing it observes leaves the device.
     </li>
     <li>
-      <strong>Display over other apps.</strong> Draws the pointer above whatever you are
-      using, so it stays visible as you move between apps.
-    </li>
-    <li>
-      <strong>Notifications.</strong> Shows the notice while the trackpad is running, an easy
-      way to stop the app.
-    </li>
-    <li>
-      <strong>Shizuku.</strong> Used to ask Android to power both screens at once, and to
-      send a camera key if you assign the camera shutter to the three-finger tap. (That
-      gesture is not offered on the Flip 3 or Flip 4, whose cover screens can only feel two
-      fingers at a time, so on those phones no camera key is ever sent.) Shizuku is a
-      separate app with its own privacy policy.
+      <strong>Vibration.</strong> A small tick confirms taps and gestures, since your
+      finger is on the back of the phone and cannot see them land.
     </li>
   </ul>
   <p>
     The app does not request the camera, microphone, location, contacts or storage
-    permissions. It does list the internet permission, which comes with Google&rsquo;s
-    billing library and is used only to ask Google Play whether PRO has been purchased.
+    permissions. It does list the internet and network-state permissions, which come with
+    Google&rsquo;s billing library and are used only to ask Google Play whether PRO has been
+    purchased. It also lists the notification permission, left over from earlier versions:
+    version 1.1 never asks for it and posts no notification of its own. The &ldquo;Dual
+    screen is on&rdquo; notification you may see while the trackpad runs comes from Android.
   </p>
 
   <h2>A note on the accessibility permission</h2>
@@ -104,7 +99,7 @@
     and clicks is only possible through that API.
   </p>
   <p>
-    It uses that access to notice two things about your screen, and nothing else:
+    It looks only at which windows are open, never at what is in them:
   </p>
   <ul>
     <li>
@@ -112,11 +107,14 @@
       while you type and does not fight the keys along the bottom of the screen.
     </li>
     <li>
-      <strong>That something on screen changed</strong> — not what changed. Android will
-      quietly take the cover screen back when apps come and go, which would switch the
-      trackpad off mid-use, so the app treats any such change as a cue to check it still has
-      the cover screen and take it back if not. Only the fact that something happened is
-      used; nothing about what.
+      <strong>Whether an app or split screen is in front</strong>, and where the navigation
+      bar's Recents key and the split-screen divider are, so the menu offers the right
+      choices and its split-screen rows work.
+    </li>
+    <li>
+      <strong>That something on screen changed</strong> — not what changed — so the
+      floating button can step out of the way and the app can check it still has the
+      cover screen.
     </li>
   </ul>
   <p>

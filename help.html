@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Help — Cover Screen Trackpad</title>
-<meta name="description" content="Everything about using Cover Screen Trackpad: gestures, settings, the three-finger tap, automation and troubleshooting.">
+<meta name="description" content="Everything about using Cover Screen Trackpad: gestures, the menu, settings, automation and troubleshooting.">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 108 108'><rect width='108' height='108' fill='%230D1117'/><path d='M32,30 H76 A8,8 0 0 1 84,38 V70 A8,8 0 0 1 76,78 H32 A8,8 0 0 1 24,70 V38 A8,8 0 0 1 32,30 Z' fill='none' stroke='%236E7885' stroke-width='4.5'/><path d='M73,58 L54,50' fill='none' stroke='%233DDCFF' stroke-width='7' stroke-linecap='round'/><path d='M29,34 L29,55 L35.3,50.1 L38.8,58.5 L42.3,57.1 L38.8,48.7 L46.5,48.7 Z' fill='%23fff' stroke='%230D1117' stroke-width='2.2'/></svg>">
 <link rel="stylesheet" href="style.css">
 </head>
@@ -12,67 +12,63 @@
 <div class="wrap">
 
   <h1>Help</h1>
-  <p class="updated">Cover Screen Trackpad, by June8LLC. The full guide; the app carries the short version.</p>
+  <p class="updated">Cover Screen Trackpad 1.1, by June8 LLC. The full guide; the app carries the short version.</p>
 
 <h3>What is Cover Trackpad?</h3>
 <p>Cover Trackpad turns the cover screen of a foldable into a trackpad while the phone is open. Your finger on the cover screen moves a pointer on the main screen; taps click whatever is under it.</p>
-<p><b>Requires a Samsung Galaxy foldable</b> — the Z Flip series (clamshell) or the Z Fold series (book-style). Cover Trackpad needs the phone to power its cover screen and its main screen <i>at the same time</i>, and that mode is a Samsung addition rather than part of standard Android. <b>Motorola Razr and other non-Samsung foldables do not have it</b> and cannot run Cover Trackpad — this was measured on a Razr+, not assumed. A touchscreen on the outside is necessary but not sufficient.</p>
+<p><b>Requires a Samsung Galaxy foldable</b> — the Z Flip series (clamshell) or the Z Fold series (book-style) — running Android 15 (One UI 7) or newer. Cover Trackpad needs the phone to offer its outer screen to apps while it is open. The <b>Pixel 9 Pro Fold and newer</b> have the same mode and ran in our lab tests; Play support for them is coming with the next update. <b>The Motorola Razr does not have it</b> and cannot run Cover Trackpad — this was measured on a Razr+, not assumed. Other makers' foldables are unknown. A touchscreen on the outside is necessary but not sufficient.</p>
 
 <h3>One-time setup</h3>
-<p><b>1. Install and start <a href="https://shizuku.rikka.app/">Shizuku</a></b> — get it from <a href="https://shizuku.rikka.app/">shizuku.rikka.app</a>. <b>If the Play Store says Shizuku isn't compatible with your phone, ignore it</b>: that is a restriction on the Play listing, not a limitation of your device, and Shizuku works fine installed from its own site. Start it via wireless debugging. Cover Trackpad uses Shizuku to activate the cover screen while the phone is open, with no PC needed. Allow Cover Trackpad when Shizuku asks. <b>After a reboot, Shizuku usually starts itself</b> — but only when the phone is on the Wi-Fi network you paired it on. On any other network you start it again by hand. If Cover Trackpad ever seems dead after restarting the phone, that is almost always why, and the button at the top of the app's settings screen will say so and take you to the fix.</p>
-<p><b>2. Tap the buttons at the top of the app's settings screen</b> to grant the overlay permission and switch on the accessibility service. With Shizuku running, both are a single tap — no PC required.</p>
+<p>Open the app, tap the button at the top and switch on Cover Trackpad's accessibility service (<i>Installed apps → Cover Trackpad</i>, then <i>Allow</i>). That is all: nothing else to install. Earlier versions needed a companion app, Shizuku; this one does not use it, so you can remove Shizuku if you installed it only for Cover Trackpad.</p>
 
 <h3>Your first week is PRO</h3>
-<p>Everything is unlocked for <b>seven days</b>, starting the first time the trackpad actually comes up — not when you install it, so setting up Shizuku does not eat into it. The main screen shows how many days are left.</p>
-<p>When the trial ends the app keeps working. You lose the <b>PRO</b> extras and keep the trackpad itself: pointer movement, tap, drag and long-press, edge-click scrolling, fade-out when idle, pointer size and speed, and starting silently. Nothing you set up disappears — if you unlock PRO later, it all comes back exactly as you left it.</p>
+<p>Everything is unlocked for <b>seven days</b>, starting the first time the trackpad actually comes up — not when you install it, and the settings screen shows how many days are left.</p>
+<p>When the trial ends the app keeps working. You lose the <b>PRO</b> extras and keep the trackpad itself: pointer movement, tap, drag and long-press, edge-click scrolling, the menu's Back, Home, Recents, app drawer, settings and turn off, fade-out when idle, pointer size and speed. The small floating button stays on screen while the trackpad is on; PRO can hide it. Nothing you set up disappears — if you unlock PRO later, it all comes back exactly as you left it.</p>
 <p>The features marked <b>PRO</b> in the settings are the ones that stop after the trial. The two most noticeable are <i>two-finger scroll and pinch</i> and the <i>active zone</i>, so if the app suddenly feels different after a week, that is what changed — not a fault.</p>
 
 <h3>Daily use</h3>
-<p>With the phone <b>fully open</b>, launch Cover Trackpad. The cover screen — dark already, since the phone is open — becomes the trackpad, and the pointer appears on the main screen. Switch to any app and control it from the back of the phone:</p>
+<p>With the phone <b>fully open</b>, launch Cover Trackpad. The cover screen becomes the trackpad, the pointer appears on the main screen, and a small floating button shows while it is on. Switch to any app and control it from the back of the phone:</p>
 <p>&#8226; <b>Swipe</b> — move the pointer. Slow is precise; a quick flick travels further. That speed-up is a checkbox: turn <i>Speed up with fast swipes</i> off for steady, predictable movement, which is easier to aim if your hands are unsteady.<br>
 &#8226; <b>Tap</b> (quick, no movement) — click at the pointer.<br>
 &#8226; <b>Hold still, then release</b> — long-press (context menus, link previews).<br>
 &#8226; <b>Hold still, then move</b> — drag. The pointer turns green when drag is armed, and the phone gives a tick unless you have turned <i>Vibrate</i> off (it starts on). To move a home-screen icon, keep holding until it lifts, then move. With swipe-to-type enabled in your keyboard's settings, gliding in drag mode over the keyboard types words.<br>
 &#8226; <b>Two-finger swipe</b> — scroll. Content follows your fingers; the pointer turns blue and stays put. Keep swiping for long pages — the invisible scrolling finger re-grabs on its own.<br>
 &#8226; <b>Two-finger pinch</b> — zoom in or out around the pointer (maps, photos, browsers). Twisting your fingers rotates, in apps that support it.<br>
-&#8226; <b>Third-finger tap</b> — with two fingers resting on the trackpad, tap a third finger: it runs the system action chosen in the app's settings (Back, Home, screenshot…), or opens an on-screen action menu you pick from with the pointer. <b>Not on the Flip 3 or Flip 4</b> — see <i>Three-finger tap</i> below.<br>
+&#8226; <b>Draw two circles</b> in one go (or a spiral), with one finger — opens the menu. The phone buzzes as soon as the circle is recognised: lift to open the menu, or carry on to the edge of the cover screen to cancel. See <i>The menu</i> below.<br>
+&#8226; <b>Scratch quickly back and forth</b>, four strokes or more along one line, at any angle — runs the action chosen for it in the settings (Back, to start with). PRO.<br>
 &#8226; <b>Edge-click scrolling</b> (on by default; slide its slider in the settings all the way left to turn it off) — pin the pointer flat against a screen edge and tap: Cover Trackpad swipes instead of clicking. Bottom edge scrolls down, top scrolls up, left/right page through books. The slider sets how far each swipe travels. The swipe is made across the middle of the screen rather than at the edge you clicked, so it isn't swallowed by a toolbar, a bottom bar or a mini-player sitting there; that also means the longest slider settings level off at around three quarters of the screen. It switches itself off while the keyboard is open, so edge taps near the keys stay clicks. This is also the only way to scroll that needs a single finger, no path and no timing — so if a two-finger swipe is awkward for you, use this instead.</p>
+
+<h3>The menu</h3>
+<p>Two circles drawn on the cover screen open the menu on the main screen. As the pointer passes over a row it lights up and the phone ticks, so you know what a tap will do before you tap. Tap beside the menu to close it.</p>
+<p>Free: the <b>navigation row</b> (Back, Home, Recents — hold Recents for split screen, with PRO) and the <b>app row</b> (app drawer, Cover Trackpad's settings, turn off). The app drawer key appears only with launchers it has been tested on (Samsung's One UI Home and Nova). PRO adds rows you choose in the settings: notifications, quick settings and screenshot; split screen (or back to full screen when you are in split screen); flashlight; lock screen; power menu.</p>
+<p>With gesture navigation there are no on-screen buttons for a pointer to press, so the menu is how you go Back or Home without touching the main screen.</p>
 
 <h3>Turning the trackpad off</h3>
 <p>&#8226; Close the phone, or<br>
 &#8226; turn the screen off, or<br>
-&#8226; tap <b>Stop</b> on the Cover Trackpad notification, or<br>
-&#8226; swipe Cover Trackpad away from the recent-apps list, or<br>
-&#8226; launch Cover Trackpad again, with <i>Launch as on/off switch</i> enabled in the settings, or<br>
-&#8226; just stop touching the cover screen — the pointer fades as a warning, taking the see-through overlay with it if you are using one, and then the trackpad turns off. Touch the cover screen while they are fading to keep the trackpad on. The <i>Fade out after</i> slider sets the wait, from <b>3 to 30 seconds</b>, or all the way right for <i>never</i>. At the short end the trackpad becomes something you switch on for a moment rather than leave running. Bear in mind it counts from when you last touched the <i>cover screen</i>, so at 3 seconds the trackpad turns off soon after you take your finger off, and you relaunch to get it back.</p>
+&#8226; tap the <b>floating button</b>, or<br>
+&#8226; choose <b>Turn off</b> in the menu, or<br>
+&#8226; launch Cover Trackpad again, with <i>Launch as on/off switch</i> enabled in the settings (PRO), or<br>
+&#8226; just stop touching the cover screen — the pointer fades as a warning, and then the trackpad turns off. Touch the cover screen while they are fading to keep the trackpad on. The <i>Fade out after</i> slider sets the wait, from <b>3 to 30 seconds</b>, or all the way right for <i>never</i>. At the short end the trackpad becomes something you switch on for a moment rather than leave running. Bear in mind it counts from when you last touched the <i>cover screen</i>, so at 3 seconds the trackpad turns off soon after you take your finger off, and you relaunch to get it back.</p>
 <p>With a short fade-out, the trackpad turns off and on again often — so <i>Remember pointer spot</i> brings the pointer back where you left it instead of starting in the middle of the screen every time. Set how long it remembers — off, 15, 30, 45 or 60 seconds, or <i>always</i>. Past about a minute away the old spot is usually stale, and a pointer that reappears somewhere unexpected is worse than one in the middle; <i>always</i> is there for anyone who wants it to behave like a desktop mouse and never re-centre. That is what makes a short fade-out painless — the trackpad can turn off as often as it likes without ever costing you your place.</p>
 <p>The <i>Quick Settings tile</i> (PRO) is the fastest way in and out: add it with the checkbox in the settings, then pull down the shade and tap it to turn the trackpad on or off without leaving the app you are in. The tile always shows the real state, so it never claims the trackpad is on after the phone has folded or the screen has slept.</p>
-<p><i>Start silently</i> is on to begin with, so launching Cover Trackpad turns the trackpad on without opening the settings screen — combined with the on/off switch, the app icon becomes a pure toggle. To get back to the settings screen at any time, <b>long-press the Cover Trackpad icon</b> on your home screen or in the app drawer and choose <i>Settings</i> — that works whether the trackpad is running or not, and it is the way in once the icon has become a pure toggle. While the trackpad is on you can also tap the Cover Trackpad notification.</p>
-<p>Everything shuts down cleanly and folding behaves normally again. After the screen turns off, relaunch Cover Trackpad to turn the trackpad back on. Leaving the app with Home or Back keeps it running.</p>
-
-<h3>Three-finger tap</h3>
-<p>A third finger landing on the panel can fire an action — the pointer-clickable menu, turning the trackpad off, an automation broadcast, the camera shutter, a screenshot, notifications, quick settings, lock screen, power menu, Back, Home or recents. It is <b>off until you turn it on</b>, because it triggers the instant the finger lands. That immediacy is the only way it can work one-handed, and it also means a hand shifting its grip can set it off.</p>
-<p><b>The Galaxy Z Flip 3 and Flip 4 cannot do this one.</b> Their cover screens track two fingers at a time — a limit of that panel's hardware, not a setting — so a third finger is never reported and the gesture never fires. Everything else works normally on those two phones, two-finger scroll and pinch included, and every other supported model tracks more than enough fingers for it.</p>
-<p><i>Camera shutter</i> sends a camera key to whatever camera app is in front: the first press opens the camera, the next takes the shot. It is meant for a phone propped open on a table or a stand, where reaching round to tap the back beats touching — and shaking — the phone. Cover Trackpad never takes a photo itself and holds no camera permission; it asks your camera app to do the thing you were already about to do. The shutter sound belongs to that app, so turn it off there if you want it quiet.</p>
+<p>To get to the settings screen at any time, <b>long-press the Cover Trackpad icon</b> on your home screen or in the app drawer and choose <i>Settings</i> — that works whether the trackpad is running or not. While the trackpad is on, the menu's settings key and a long press on the floating button get you there too.</p>
+<p>Everything shuts down cleanly and folding behaves normally again. After the screen turns off, relaunch Cover Trackpad to turn the trackpad back on. Leaving the app with Home or Back keeps it running. While the trackpad is on, Android shows its own "Dual screen is on" notification; that is normal.</p>
 
 <h3>Automation: make the gesture do anything</h3>
-<p>Set the three-finger action to <i>Automation app</i> and the gesture sends a broadcast that MacroDroid, Tasker, Automate or anything similar can catch. From there it can do whatever your phone can do — including things with no app-level control of their own, such as Samsung Modes and Routines.</p>
-<p>The action to listen for is:</p>
+<p>Set a drawn gesture's action to <i>Automation app</i> and the gesture sends a broadcast that MacroDroid, Tasker, Automate or anything similar can catch. From there it can do whatever your phone can do — including things with no app-level control of their own, such as Samsung Modes and Routines.</p>
+<p>The action to listen for is (the name is older than the gestures, and kept so existing macros keep working):</p>
 <p><tt>com.june8llc.covertrackpad.THREE_FINGER_TAP</tt></p>
 <p>It carries one extra, <tt>source</tt>, saying which gesture sent it.</p>
 <p><b>In MacroDroid, leave the trigger's extras empty.</b> Add an <i>Intent Received</i> trigger, type the action above, and add nothing else. Adding an extra row — even a blank one — stops the trigger matching, and it fails silently with nothing in MacroDroid's log to explain why.</p>
 
 <h3>Troubleshooting</h3>
-<p>&#8226; <b>No pointer after launching</b> — check the status line at the top: the phone may not be fully open, or Shizuku may not be running.<br>
-&#8226; <b>Pointer vanished on its own</b> — the screen slept or the phone was closed; both turn the trackpad off. Relaunch to start again.<br>
-&#8226; <b>Phone stuck showing both screens</b> — rare, and it clears itself. Cover Trackpad hands fold control back to the phone when the trackpad turns off, and sweeps up anything a previous run left behind the next time it starts — so open and close the phone once with Cover Trackpad running, or simply launch it again. That reset goes through Shizuku, so if Shizuku has stopped, start it and the next launch will tidy up. Restarting the phone clears it too.<br>
-&#8226; <b>Nothing works after restarting the phone</b> — Shizuku starts itself after a reboot only when the phone is on the Wi-Fi network you paired it on. On any other network, open Shizuku and start it again. Its <i>Start on boot</i> setting is labelled <i>(root)</i> and does nothing on an unrooted phone. The button near the top of the settings screen tells you exactly what is missing and takes you there.<br>
+<p>&#8226; <b>No pointer after launching</b> — check the status line at the top of the settings screen: the phone may not be fully open.<br>
+&#8226; <b>"This phone does not offer its outer screen to apps"</b> — the phone's software does not allow it, and Cover Trackpad cannot work on it. Please send a problem report from the app, so we know.<br>
+&#8226; <b>Pointer vanished on its own</b> — the screen slept, the phone was closed, or the idle fade-out ran; each turns the trackpad off. Relaunch to start again.<br>
+&#8226; <b>Finger trails on the cover screen, but no pointer on the main screen</b> — Android has hidden the pointer. Cover Trackpad notices and fixes this by itself within a couple of seconds. If the pointer still does not appear, turn the trackpad off and launch it again. If that does not help either, go to <i>Settings → Accessibility → Installed apps → Cover Trackpad</i>, switch it off and on again, then launch Cover Trackpad.<br>
 &#8226; <b>The pointer will not click permission dialogs, and cannot be seen over them</b> — that is Android, not a fault, and there is no way around it. Android deliberately refuses injected taps over permission prompts and similar protected windows, and hides overlays like our pointer while they are showing. The protection exists so that an app cannot draw over a permission dialog and tap Allow on your behalf. Use the screen normally for those, then carry on.<br>
-&#8226; <b>No pointer while this settings screen is open</b> — that one is deliberate. While the settings screen is in front of you, your finger is placing the active zone rather than driving the pointer, so the pointer hides and the trackpad stops responding until you leave. Tap <i>Back to home screen</i> and it returns.</p>
-
-<h3>Using the trackpad alongside these settings</h3>
-<p>Put Cover Trackpad in <b>split screen</b> or a <b>pop-up window</b> and the trackpad keeps working — the pointer stays on screen and you can click into whatever is in the other window, including this app. That makes it easy to change a setting and try it immediately, without closing anything.</p>
-<p>The one thing you give up is the <b>live finger dots</b> in the active zone editor. Those only appear when the settings screen has the display to itself, because showing them is what switches the trackpad off. If you are positioning a custom zone by eye, do it full screen; for everything else, a pop-up window is the quicker way to work.</p>
+&#8226; <b>Something else</b> — send a problem report with the button in the settings. It opens your email app with the details written out; nothing is sent until you press send.</p>
 
 
   <footer>
